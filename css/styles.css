@@ -1,0 +1,267 @@
+:root {
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+  --font-size: 16px;
+  --font-family: "Young Serif", "Outfit", sans-serif;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem 0;
+  background: var(--eggshell, #F3E5D7);
+}
+
+.recipe {
+  display: flex;
+  max-width: 46rem;
+  padding: 2.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  border-radius: 1.5rem;
+  background: var(--white, #FFF);
+}
+.recipe li::marker {
+  color: var(--nutmeg);
+}
+.recipe .recipe-picture {
+  height: 18.75rem;
+}
+.recipe .recipe-picture > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.75rem;
+  object-fit: contain;
+}
+.recipe .content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+.recipe .content .heading {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+}
+.recipe .content .heading .title {
+  color: var(--dark-charcoal, #312E2C);
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.recipe .content .heading .description {
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 1.5rem */
+}
+.recipe .preparation {
+  display: flex;
+  padding: 1.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+  border-radius: 0.75rem;
+  background: var(--rose-white, #FFF7FB);
+}
+.recipe .preparation .title {
+  color: var(--dark-raspberry, #7A284E);
+  font-family: "Outfit";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.recipe .preparation .steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1.8rem;
+}
+.recipe .preparation .steps .step {
+  flex: 1 0 0;
+  vertical-align: center;
+}
+.recipe .preparation .steps .step .title {
+  display: inline-block;
+  margin-left: 1rem;
+  color: var(--wenge-brown, #5F564D);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.recipe .preparation .steps .step .details {
+  display: inline-block;
+  color: var(--wenge-brown, #5F564D);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.recipe .ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.recipe .ingredients .title {
+  align-self: stretch;
+  color: var(--nutmeg, #854632);
+  font-family: "Young Serif";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+.recipe .ingredients .ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+}
+.recipe .ingredients .ingredients-list .ingredient-item > .detail {
+  color: var(--wenge-brown, #5F564D);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-left: 1rem;
+}
+.recipe .instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.recipe .instructions .title {
+  color: var(--nutmeg, #854632);
+  font-family: "Young Serif";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+.recipe .instructions .instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.recipe .instructions .instructions-list .instruction-item {
+  margin-left: 1rem;
+}
+.recipe .instructions .instructions-list .instruction-item > .instruction-container {
+  margin-left: 1rem;
+}
+.recipe .instructions .instructions-list .instruction-item > .instruction-container .instruction-title {
+  color: var(--wenge-brown, #5F564D);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.recipe .instructions .instructions-list .instruction-item > .instruction-container .instruction-description {
+  color: var(--wenge-brown, #5F564D);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.recipe .nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.recipe .nutrition .title {
+  align-self: stretch;
+  color: var(--nutmeg, #854632);
+  font-family: "Young Serif";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+.recipe .nutrition .description {
+  color: var(--wenge-brown, #5F564D);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.recipe .table {
+  display: flex;
+  flex-direction: column;
+}
+.recipe .table .table-item {
+  display: flex;
+  flex-direction: column;
+}
+.recipe .table .table-item:after {
+  display: flex;
+  content: "";
+  max-width: 41rem;
+  height: 0.0625rem;
+  background: #E3DDD7;
+  margin: 0.75rem 0;
+}
+.recipe .table .table-item .table-item-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-around;
+}
+.recipe .table .table-item .table-item-content .table-item-title {
+  flex: 1 1 0;
+  color: var(--wenge-brown, #5F564D);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-left: 2rem;
+}
+.recipe .table .table-item .table-item-content .table-item-detail {
+  flex: 1 1 0;
+  color: var(--nutmeg, #854632);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=styles.css.map */
