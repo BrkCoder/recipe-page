@@ -44,11 +44,25 @@ body {
 .recipe .recipe-picture {
   height: 18.75rem;
 }
+@media screen and (max-width: 1440px) {
+  .recipe .recipe-picture {
+    height: auto;
+    margin: -2.5rem -2.5rem 0 -2.5rem;
+  }
+}
 .recipe .recipe-picture > img {
   height: 100%;
   width: 100%;
   border-radius: 0.75rem;
   object-fit: contain;
+}
+@media screen and (max-width: 1440px) {
+  .recipe .recipe-picture > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    object-fit: cover;
+  }
 }
 .recipe .content {
   display: flex;

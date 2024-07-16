@@ -72,11 +72,24 @@ body {
   .recipe-picture {
     height: 18.75rem;
 
+    @media screen and (max-width: 1440px) {
+
+      height: auto;
+      margin: -2.5rem -2.5rem 0 -2.5rem;
+    }
+
     & > img {
       height: 100%;
       width: 100%;
       border-radius: 0.75rem;
       object-fit: contain; //save aspect-ratio of image
+
+      @media screen and (max-width: 1440px) {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        object-fit: cover; //save aspect-ratio of image
+      }
     }
   }
 
